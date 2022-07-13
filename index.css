@@ -40,6 +40,9 @@ html, body, figure, header,img, div, section, article, input, button, textarea, 
     padding: 10px;
     min-height: 160px;
 }
+.info p {
+    margin-bottom: 10px;
+}
 .link-button {
     background-color: #8bc34a;
     color: #fff;
