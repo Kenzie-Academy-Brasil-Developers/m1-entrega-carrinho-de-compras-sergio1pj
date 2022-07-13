@@ -35,9 +35,9 @@ itemValor.innerText = "Item Valor";
 listHeader.appendChild(itemValor);
 let productList = document.createElement("ul");
 let total = document.createElement("div");
-let tagTotal = document.createElement("p");
-tagTotal.innerText = "";
-total.appendChild(tagTotal);
+let valorTotal = document.createElement("p");
+valorTotal.innerText = "";
+total.appendChild(valorTotal);
 let buttonEnd = document.createElement("button");
 buttonEnd.innerText = "Finalizar Compra";
 function createProductDetails(product) {
@@ -72,6 +72,5 @@ createList(productsCart, productList);
 mainAppend([title, listHeader, productList, total, buttonEnd])
 buttonEnd.addEventListener("click", (event) => {
     event.preventDefault(); 
-    tagTotal.innerText = createTotal(productsCart);
+    valorTotal.innerText = createTotal(productsCart);
 });
-
