@@ -27,23 +27,27 @@ const productsCart = [
 ]
 let body = document.querySelector("body");
 let main = document.createElement("main");
-main.classList.add("container");
 let title = document.createElement("h1");
-title.innerText = "Virtual Market";
 let shoppingCart = document.createElement("section");
-shoppingCart.classList.add("shopping-cart");
 let listHeader = document.createElement("h2");
-listHeader.innerText = "Carrinho";
 let productList = document.createElement("ul");
-productList.classList.add("products-wrapper")
 let total = document.createElement("div");
-total.classList.add("info")
 let valorTotal = document.createElement("p");
-valorTotal.innerText = "";
-total.appendChild(valorTotal);
 let buttonEnd = document.createElement("button");
+let shoppingCartList = [title, listHeader, productList, total];
+main.classList.add("container");
+shoppingCart.classList.add("shopping-cart");
+productList.classList.add("products-wrapper")
+title.innerText = "Virtual Market";
+listHeader.innerText = "Carrinho";
+total.classList.add("info")
+valorTotal.innerText = "";
 buttonEnd.innerText = "Finalizar Compra";
+total.appendChild(valorTotal);
 total.appendChild(buttonEnd);
+body.appendChild(main);
+modAppend(convertCards(productsCart), productList);
+main.appendChild(shoppingCart);
 function createCard(product) {
     let tagLi = document.createElement("li");
     let tagNome = document.createElement("h2");
@@ -67,10 +71,6 @@ function createTotal(array) {
     array.forEach(product => totalValue += product["price"]);
     return `Total R$ ${totalValue}`.replace(".", ",");
 }
-body.appendChild(main);
-main.appendChild(shoppingCart);
-modAppend(convertCards(productsCart), productList);
-let shoppingCartList = [title, listHeader, productList, total];
 modAppend(shoppingCartList, shoppingCart)
 buttonEnd.addEventListener("click", (event) => {
     event.preventDefault(); 
