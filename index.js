@@ -60,7 +60,6 @@ function createTotal(array) {
 }
 body.appendChild(main);
 createList(productsCart, productList);
-createTotal(productsCart, total);
 itemValor.innerText = "Item Valor"; 
 listHeader.appendChild(itemValor);
 main.appendChild(listHeader);
@@ -68,3 +67,8 @@ main.appendChild(productList);
 main.appendChild(total);
 buttonEnd.innerText = "Finalizar Compra";
 main.appendChild(buttonEnd);
+buttonEnd.addEventListener("click", (event) => {
+    event.preventDefault(); 
+    createTotal(productsCart);
+});
+
