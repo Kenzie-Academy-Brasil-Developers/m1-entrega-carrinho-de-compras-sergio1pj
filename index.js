@@ -41,10 +41,16 @@ function createProductDetails(product) {
     let tagValor = document.createElement("p");
     tagLi.classList.add("product-card");
     tagDivInfo.classList.add("product-card-info");
-    tagNome.innerText = produto["nome"];
-    tagValor.innerText = produto["valor"];
+    tagNome.innerText = product["name"];
+    tagValor.innerText = product["price"];
     tagDivInfo.appendChild(tagNome);
     tagDivInfo.appendChild(tagValor);
     tagLi.appendChild(tagDivInfo);
     return tagLi;
 }
+
+function createSection(list, section) {
+    list.forEach(element => section.appendChild(createProductDetails(element)));
+}
+
+createSection(productsCart, productList);
