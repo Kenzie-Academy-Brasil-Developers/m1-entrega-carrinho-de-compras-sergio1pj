@@ -28,9 +28,9 @@ const productsCart = [
 let body = document.querySelector("body");
 let main = document.createElement("main");
 let listHeader = document.createElement("div");
-let item = document.createElement("p");
-let valor = document.createElement("p");
+let itemValor = document.createElement("p");
 let productList = document.createElement("ul");
+let total = document.createElement("div");
 let buttonEnd = document.createElement("button");
 function createProductDetails(product) {
     let tagLi = document.createElement("li");
@@ -48,13 +48,21 @@ function createProductDetails(product) {
 }
 function createList(array, list) {
     array.forEach(product => list.appendChild(createProductDetails(product)));
-    return "Lista criada com sucesso";
+    return "Lista atualizada com sucesso";
+}
+function createTotal(array) {
+    let totalValue = 0;
+    array.forEach(product => totalValue += product["price"]);
+    let tagTotal = document.createElement("p");
+    tagTotal.innerText = "Total: " + totalValue;
+    total.appendChild(tagTotal);
+    return "Total atualizado com sucesso";
 }
 body.appendChild(main);
 createList(productsCart, productList);
-item.innerText = "Item";
-valor.innerText = "Valor";
-listHeader.appendChild(item);
-listHeader.appendChild(valor);
+createTotal(productsCart, total);
+itemValor.innerText = "Item Valor"; 
+listHeader.appendChild(itemValor);
 main.appendChild(listHeader);
 main.appendChild(productList);
+main.appendChild(total);
