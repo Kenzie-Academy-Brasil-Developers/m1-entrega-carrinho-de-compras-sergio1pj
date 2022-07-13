@@ -59,9 +59,7 @@ html, body, figure, header,img, div, section, article, input, button, textarea, 
     background-color: #e9ecef;
     padding: 10px;
     height: 90px;
-}
-.info p {
-    margin-bottom: 20px;
+    border-radius: 15px;
 }
 button {
     background-color: #20c997;

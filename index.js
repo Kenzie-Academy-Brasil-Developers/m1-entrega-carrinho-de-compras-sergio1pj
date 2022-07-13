@@ -30,12 +30,11 @@ let main = document.createElement("main");
 let shoppingCart = document.createElement("section");
 let listHeader = document.createElement("h2");
 let productList = document.createElement("ul");
-let total = document.createElement("div");
-let valorTotal = document.createElement("p");
+let total = document.createElement("p");
 let buttonEnd = document.createElement("button");
 let shoppingCartList = [listHeader, productList, total, buttonEnd];
 listHeader.innerText = "Carrinho";
-valorTotal.innerText = "";
+total.innerText = "";
 buttonEnd.innerText = "Finalizar Compra";
 main.classList.add("container");
 shoppingCart.classList.add("shopping-cart");
@@ -43,7 +42,6 @@ productList.classList.add("products-wrapper")
 total.classList.add("info")
 body.appendChild(main);
 modAppend(convertCards(productsCart), productList);
-total.appendChild(valorTotal);
 modAppend(shoppingCartList, shoppingCart);
 main.appendChild(shoppingCart);
 function createCard(product) {
@@ -71,5 +69,5 @@ function createTotal(array) {
 }
 buttonEnd.addEventListener("click", (event) => {
     event.preventDefault(); 
-    valorTotal.innerText = createTotal(productsCart);
+    total.innerText = createTotal(productsCart);
 });
