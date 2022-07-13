@@ -35,14 +35,14 @@ let total = document.createElement("div");
 let valorTotal = document.createElement("p");
 let buttonEnd = document.createElement("button");
 let shoppingCartList = [title, listHeader, productList, total];
+title.innerText = "Virtual Market";
+listHeader.innerText = "Carrinho";
+valorTotal.innerText = "";
+buttonEnd.innerText = "Finalizar Compra";
 main.classList.add("container");
 shoppingCart.classList.add("shopping-cart");
 productList.classList.add("products-wrapper")
-title.innerText = "Virtual Market";
-listHeader.innerText = "Carrinho";
 total.classList.add("info")
-valorTotal.innerText = "";
-buttonEnd.innerText = "Finalizar Compra";
 total.appendChild(valorTotal);
 total.appendChild(buttonEnd);
 body.appendChild(main);
