@@ -49,7 +49,6 @@ function createCard(product) {
     let tagNome = document.createElement("h2");
     let tagValor = document.createElement("p");
     tagLi.classList.add("product-card");
-    tagDivInfo.classList.add("product-card-info");
     tagNome.innerText = product["name"];
     tagValor.innerText = `R$ ${product["price"]}`.replace(".", ",");
     tagDivInfo.appendChild(tagNome);
