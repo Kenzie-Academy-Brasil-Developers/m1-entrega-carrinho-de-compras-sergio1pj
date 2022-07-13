@@ -14,10 +14,16 @@ html, body, figure, header,img, div, section, article, input, button, textarea, 
     box-sizing: border-box;
     font-weight: 400;
 }
-.container {
-    width: 20%;
+.container{
+    display: flex;
+    max-width: 1500px;
+    margin: auto;
 }
-.container > h2 {
+.shopping-cart{
+    width: 20%;
+    margin: 20px auto;
+}
+.shopping-cart > h2 {
     margin-bottom: 40px;
     background-color: #212529;
     color: #fff;

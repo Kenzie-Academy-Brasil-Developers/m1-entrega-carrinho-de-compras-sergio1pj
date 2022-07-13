@@ -30,6 +30,8 @@ let main = document.createElement("main");
 main.classList.add("container");
 let title = document.createElement("h1");
 title.innerText = "Virtual Market";
+let shoppingCart = document.createElement("section");
+shoppingCart.classList.add("shopping-cart");
 let listHeader = document.createElement("h2");
 listHeader.innerText = "Carrinho";
 let productList = document.createElement("ul");
@@ -66,9 +68,10 @@ function createTotal(array) {
     return `Total R$ ${totalValue}`.replace(".", ",");
 }
 body.appendChild(main);
+main.appendChild(shoppingCart);
 modAppend(convertCards(productsCart), productList);
-let mainList = [title, listHeader, productList, total];
-modAppend(mainList, main)
+let shoppingCartList = [title, listHeader, productList, total];
+modAppend(shoppingCartList, shoppingCart)
 buttonEnd.addEventListener("click", (event) => {
     event.preventDefault(); 
     valorTotal.innerText = createTotal(productsCart);
