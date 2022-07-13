@@ -32,6 +32,7 @@ html, body, figure, header,img, div, section, article, input, button, textarea, 
     justify-content: space-between;
     height: 100px;
     min-height: initial;
+    background-color: #f8f9fa;
     border: solid #ccc 1px;
     max-width: 100%;
 } 
