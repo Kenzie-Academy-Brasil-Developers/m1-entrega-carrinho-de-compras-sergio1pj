@@ -44,11 +44,11 @@ html, body, figure, header,img, div, section, article, input, button, textarea, 
     border: solid #ccc 1px;
     max-width: 100%;
 }
-.product-card div h2 {
+.product-card  h2 {
     margin-bottom: 0;
     padding: 0 20px;
 }
-.product-card div p {
+.product-card  p {
     width: 100px;
 }
 .info {
