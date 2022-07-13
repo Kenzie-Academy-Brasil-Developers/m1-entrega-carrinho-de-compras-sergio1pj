@@ -35,7 +35,7 @@ let buttonEnd = document.createElement("button");
 let shoppingCartList = [listHeader, productList, total, buttonEnd];
 listHeader.innerText = "Carrinho";
 total.innerText = "";
-buttonEnd.innerText = "Finalizar Compra";
+buttonEnd.innerText = "Finalizar compra";
 main.classList.add("container");
 shoppingCart.classList.add("shopping-cart");
 productList.classList.add("products-wrapper")
