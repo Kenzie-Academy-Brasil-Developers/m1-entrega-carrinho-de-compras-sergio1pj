@@ -48,7 +48,7 @@ function createProductDetails(product) {
 }
 function createList(array, list) {
     array.forEach(product => list.appendChild(createProductDetails(product)));
-    return "Lista atualizada com sucesso";
+    return "Lista criada com sucesso";
 }
 function createTotal(array) {
     let totalValue = 0;
@@ -56,7 +56,7 @@ function createTotal(array) {
     let tagTotal = document.createElement("p");
     tagTotal.innerText = `Total: R$ ${totalValue}`.replace(".", ",");
     total.appendChild(tagTotal);
-    return "Total atualizado com sucesso";
+    return "Total criado com sucesso";
 }
 body.appendChild(main);
 createList(productsCart, productList);
