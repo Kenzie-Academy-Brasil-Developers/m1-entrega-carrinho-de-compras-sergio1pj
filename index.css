@@ -60,6 +60,7 @@ html, body, figure, header,img, div, section, article, input, button, textarea, 
     padding: 10px;
     height: 90px;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 button {
     background-color: #20c997;
@@ -68,6 +69,5 @@ button {
     float: right;
     border-radius: 5px;
     font-size: 15px;
-    margin-top: 40px;
     width: 100%;
 }
