@@ -28,9 +28,23 @@ const productsCart = [
 let Body = document.querySelector("body");
 let Main = document.createElement("main");
 let productList = document.createElement("ul");
-let productDetails = document.createElement("li");
 let buttonEnd = document.createElement("button");
 
 Body.appendChild(Main);
 Main.appendChild(productList);
-Main.appendChild(productDetails);
+
+
+function createProductDetails(product) {
+    let tagLi = document.createElement("li");
+    let tagDivInfo = document.createElement("div");
+    let tagNome = document.createElement("h2");
+    let tagValor = document.createElement("p");
+    tagLi.classList.add("product-card");
+    tagDivInfo.classList.add("product-card-info");
+    tagNome.innerText = produto["nome"];
+    tagValor.innerText = produto["valor"];
+    tagDivInfo.appendChild(tagNome);
+    tagDivInfo.appendChild(tagValor);
+    tagLi.appendChild(tagDivInfo);
+    return tagLi;
+}
