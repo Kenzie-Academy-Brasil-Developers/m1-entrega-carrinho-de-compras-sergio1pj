@@ -39,8 +39,7 @@ total.classList.add("info")
 let valorTotal = document.createElement("p");
 valorTotal.innerText = "";
 total.appendChild(valorTotal);
-let buttonEnd = document.createElement("a");
-buttonEnd.classList.add("link-button");
+let buttonEnd = document.createElement("button");
 buttonEnd.innerText = "Finalizar Compra";
 total.appendChild(buttonEnd);
 function createCard(product) {

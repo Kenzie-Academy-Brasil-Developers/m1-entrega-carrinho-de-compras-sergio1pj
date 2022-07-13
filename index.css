@@ -53,7 +53,7 @@ html, body, figure, header,img, div, section, article, input, button, textarea, 
 .info p {
     margin-bottom: 10px;
 }
-.link-button {
+.info button {
     background-color: #20c997;
     color: #fff;
     padding: 10px;
