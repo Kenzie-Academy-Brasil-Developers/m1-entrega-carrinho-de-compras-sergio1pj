@@ -27,15 +27,13 @@ const productsCart = [
 ]
 let body = document.querySelector("body");
 let main = document.createElement("main");
-let title = document.createElement("h1");
 let shoppingCart = document.createElement("section");
 let listHeader = document.createElement("h2");
 let productList = document.createElement("ul");
 let total = document.createElement("div");
 let valorTotal = document.createElement("p");
 let buttonEnd = document.createElement("button");
-let shoppingCartList = [title, listHeader, productList, total];
-title.innerText = "Virtual Market";
+let shoppingCartList = [listHeader, productList, total, buttonEnd];
 listHeader.innerText = "Carrinho";
 valorTotal.innerText = "";
 buttonEnd.innerText = "Finalizar Compra";
@@ -46,7 +44,6 @@ total.classList.add("info")
 body.appendChild(main);
 modAppend(convertCards(productsCart), productList);
 total.appendChild(valorTotal);
-total.appendChild(buttonEnd);
 modAppend(shoppingCartList, shoppingCart);
 main.appendChild(shoppingCart);
 function createCard(product) {

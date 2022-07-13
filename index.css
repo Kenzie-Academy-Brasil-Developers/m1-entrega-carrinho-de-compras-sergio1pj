@@ -24,9 +24,12 @@ html, body, figure, header,img, div, section, article, input, button, textarea, 
     margin: 20px auto;
 }
 .shopping-cart > h2 {
-    margin-bottom: 40px;
+    height: 55px;
+    margin-bottom: 20px;
     background-color: #212529;
     color: #fff;
+    text-align: center;
+    border-radius: 15px;
 }
 .products-wrapper {
     background-color: #fff;
@@ -38,11 +41,12 @@ html, body, figure, header,img, div, section, article, input, button, textarea, 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100px;
+    height: 55px;
     min-height: initial;
     background-color: #f8f9fa;
-    border: solid #ccc 1px;
+    border-radius: 15px;
     max-width: 100%;
+    margin-bottom: 20px;
 }
 .product-card  h2 {
     margin-bottom: 0;
@@ -54,12 +58,12 @@ html, body, figure, header,img, div, section, article, input, button, textarea, 
 .info {
     background-color: #e9ecef;
     padding: 10px;
-    min-height: 160px;
+    height: 90px;
 }
 .info p {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
-.info button {
+button {
     background-color: #20c997;
     color: #fff;
     padding: 10px;
