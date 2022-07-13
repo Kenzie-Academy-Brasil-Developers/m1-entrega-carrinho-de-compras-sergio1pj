@@ -66,3 +66,5 @@ listHeader.appendChild(itemValor);
 main.appendChild(listHeader);
 main.appendChild(productList);
 main.appendChild(total);
+buttonEnd.innerText = "Finalizar Compra";
+main.appendChild(buttonEnd);
