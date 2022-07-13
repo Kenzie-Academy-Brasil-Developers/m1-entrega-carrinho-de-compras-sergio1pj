@@ -45,6 +45,7 @@ function createProductDetails(product) {
 }
 function createList(array, list) {
     array.forEach(product => list.appendChild(createProductDetails(product)));
+    return "Lista criada com sucesso";
 }
 Body.appendChild(Main);
 createList(productsCart, productList);
