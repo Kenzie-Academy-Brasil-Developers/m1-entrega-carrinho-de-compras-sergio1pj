@@ -40,7 +40,7 @@ function createProductDetails(product) {
     tagLi.classList.add("product-card");
     tagDivInfo.classList.add("product-card-info");
     tagNome.innerText = product["name"];
-    tagValor.innerText = product["price"];
+    tagValor.innerText = `R$ ${product["price"]}`.replace(".", ",");
     tagDivInfo.appendChild(tagNome);
     tagDivInfo.appendChild(tagValor);
     tagLi.appendChild(tagDivInfo);
@@ -54,7 +54,7 @@ function createTotal(array) {
     let totalValue = 0;
     array.forEach(product => totalValue += product["price"]);
     let tagTotal = document.createElement("p");
-    tagTotal.innerText = "Total: " + totalValue;
+    tagTotal.innerText = `Total: R$ ${totalValue}`.replace(".", ",");
     total.appendChild(tagTotal);
     return "Total atualizado com sucesso";
 }
