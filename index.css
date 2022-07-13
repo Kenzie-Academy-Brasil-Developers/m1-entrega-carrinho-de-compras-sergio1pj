@@ -20,7 +20,7 @@ html, body, figure, header,img, div, section, article, input, button, textarea, 
     margin: auto;
 }
 .shopping-cart{
-    width: 20%;
+    width: 42%;
     margin: 20px auto;
 }
 .shopping-cart > h2 {
