@@ -36,7 +36,7 @@ html, body, figure, header,img, div, section, article, input, button, textarea, 
     max-width: 100%;
 } 
 .info {
-    background-color: #fff;
+    background-color: #e9ecef;
     padding: 10px;
     min-height: 160px;
 }
@@ -44,7 +44,7 @@ html, body, figure, header,img, div, section, article, input, button, textarea, 
     margin-bottom: 10px;
 }
 .link-button {
-    background-color: #8bc34a;
+    background-color: #20c997;
     color: #fff;
     padding: 10px;
     float: right;
