@@ -25,8 +25,11 @@ const productsCart = [
         price: 17.98
     }  
 ]
-let Body = document.querySelector("body");
-let Main = document.createElement("main");
+let body = document.querySelector("body");
+let main = document.createElement("main");
+let listHeader = document.createElement("div");
+let item = document.createElement("p");
+let valor = document.createElement("p");
 let productList = document.createElement("ul");
 let buttonEnd = document.createElement("button");
 function createProductDetails(product) {
@@ -47,6 +50,11 @@ function createList(array, list) {
     array.forEach(product => list.appendChild(createProductDetails(product)));
     return "Lista criada com sucesso";
 }
-Body.appendChild(Main);
+body.appendChild(main);
 createList(productsCart, productList);
-Main.appendChild(productList);
+item.innerText = "Item";
+valor.innerText = "Valor";
+listHeader.appendChild(item);
+listHeader.appendChild(valor);
+main.appendChild(listHeader);
+main.appendChild(productList);
