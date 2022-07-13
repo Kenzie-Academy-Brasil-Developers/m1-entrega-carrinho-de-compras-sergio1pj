@@ -30,10 +30,8 @@ let main = document.createElement("main");
 main.classList.add("container");
 let title = document.createElement("h1");
 title.innerText = "Virtual Market";
-let listHeader = document.createElement("div");
-let itemValor = document.createElement("h2");
-itemValor.innerText = "Item Valor"; 
-listHeader.appendChild(itemValor);
+let listHeader = document.createElement("h2");
+listHeader.innerText = "Carrinho";
 let productList = document.createElement("ul");
 productList.classList.add("products-wrapper")
 let total = document.createElement("div");
