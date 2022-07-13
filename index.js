@@ -43,10 +43,11 @@ main.classList.add("container");
 shoppingCart.classList.add("shopping-cart");
 productList.classList.add("products-wrapper")
 total.classList.add("info")
-total.appendChild(valorTotal);
-total.appendChild(buttonEnd);
 body.appendChild(main);
 modAppend(convertCards(productsCart), productList);
+total.appendChild(valorTotal);
+total.appendChild(buttonEnd);
+modAppend(shoppingCartList, shoppingCart);
 main.appendChild(shoppingCart);
 function createCard(product) {
     let tagLi = document.createElement("li");
@@ -71,7 +72,6 @@ function createTotal(array) {
     array.forEach(product => totalValue += product["price"]);
     return `Total R$ ${totalValue}`.replace(".", ",");
 }
-modAppend(shoppingCartList, shoppingCart)
 buttonEnd.addEventListener("click", (event) => {
     event.preventDefault(); 
     valorTotal.innerText = createTotal(productsCart);
