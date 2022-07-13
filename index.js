@@ -40,7 +40,7 @@ valorTotal.innerText = "";
 total.appendChild(valorTotal);
 let buttonEnd = document.createElement("button");
 buttonEnd.innerText = "Finalizar Compra";
-function createProductDetails(product) {
+function createCard(product) {
     let tagLi = document.createElement("li");
     let tagDivInfo = document.createElement("div");
     let tagNome = document.createElement("h2");
@@ -54,22 +54,22 @@ function createProductDetails(product) {
     tagLi.appendChild(tagDivInfo);
     return tagLi;
 }
-function createList(array, list) {
-    array.forEach(product => list.appendChild(createProductDetails(product)));
-    return "Lista criada com sucesso";
+function convertCards(array) {
+    return array.map(product =>  createCard(product));
+}
+function modAppend(arrayDom, list) {
+    arrayDom.forEach(element => list.appendChild(element));
+    return "true";
 }
 function createTotal(array) {
     let totalValue = 0;
     array.forEach(product => totalValue += product["price"]);
     return `Total R$ ${totalValue}`.replace(".", ",");
 }
-function mainAppend(array) {
-    array.forEach(element => main.appendChild(element));
-    return "Elemento adicionado com sucesso na main";
-}
 body.appendChild(main);
-createList(productsCart, productList);
-mainAppend([title, listHeader, productList, total, buttonEnd])
+modAppend(convertCards(productsCart), productList);
+let mainList = [title, listHeader, productList, total, buttonEnd];
+modAppend(mainList, main)
 buttonEnd.addEventListener("click", (event) => {
     event.preventDefault(); 
     valorTotal.innerText = createTotal(productsCart);
