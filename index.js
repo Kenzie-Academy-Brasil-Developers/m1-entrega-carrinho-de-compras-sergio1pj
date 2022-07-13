@@ -37,12 +37,14 @@ listHeader.appendChild(itemValor);
 let productList = document.createElement("ul");
 productList.classList.add("products-wrapper")
 let total = document.createElement("div");
+total.classList.add("info")
 let valorTotal = document.createElement("p");
 valorTotal.innerText = "";
 total.appendChild(valorTotal);
 let buttonEnd = document.createElement("a");
 buttonEnd.classList.add("link-button");
 buttonEnd.innerText = "Finalizar Compra";
+total.appendChild(buttonEnd);
 function createCard(product) {
     let tagLi = document.createElement("li");
     let tagDivInfo = document.createElement("div");
@@ -70,7 +72,7 @@ function createTotal(array) {
 }
 body.appendChild(main);
 modAppend(convertCards(productsCart), productList);
-let mainList = [title, listHeader, productList, total, buttonEnd];
+let mainList = [title, listHeader, productList, total];
 modAppend(mainList, main)
 buttonEnd.addEventListener("click", (event) => {
     event.preventDefault(); 
