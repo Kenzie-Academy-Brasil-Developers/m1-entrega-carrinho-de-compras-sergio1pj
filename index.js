@@ -27,6 +27,8 @@ const productsCart = [
 ]
 let body = document.querySelector("body");
 let main = document.createElement("main");
+let title = document.createElement("h1");
+title.innerText = "Virtual Market";
 let listHeader = document.createElement("div");
 let itemValor = document.createElement("p");
 itemValor.innerText = "Item Valor"; 
@@ -67,7 +69,7 @@ function mainAppend(array) {
 }
 body.appendChild(main);
 createList(productsCart, productList);
-mainAppend([listHeader, productList, total, buttonEnd])
+mainAppend([title, listHeader, productList, total, buttonEnd])
 buttonEnd.addEventListener("click", (event) => {
     event.preventDefault(); 
     tagTotal.innerText = createTotal(productsCart);
