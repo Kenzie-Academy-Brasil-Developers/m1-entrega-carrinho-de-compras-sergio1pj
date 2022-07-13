@@ -54,7 +54,7 @@ function createTotal(array) {
     let totalValue = 0;
     array.forEach(product => totalValue += product["price"]);
     let tagTotal = document.createElement("p");
-    tagTotal.innerText = `Total: R$ ${totalValue}`.replace(".", ",");
+    tagTotal.innerText = `Total R$ ${totalValue}`.replace(".", ",");
     total.appendChild(tagTotal);
     return "Total criado com sucesso";
 }
