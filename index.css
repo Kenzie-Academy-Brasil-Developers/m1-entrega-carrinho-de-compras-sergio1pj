@@ -29,7 +29,7 @@ html, body, figure, header,img, div, section, article, input, button, textarea, 
     background-color: #212529;
     color: #fff;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 .products-wrapper {
     background-color: #fff;
@@ -44,7 +44,7 @@ html, body, figure, header,img, div, section, article, input, button, textarea, 
     height: 55px;
     min-height: initial;
     background-color: #f8f9fa;
-    border-radius: 15px;
+    border-radius: 5px;
     max-width: 100%;
     margin-bottom: 20px;
 }
@@ -59,7 +59,7 @@ html, body, figure, header,img, div, section, article, input, button, textarea, 
     background-color: #e9ecef;
     padding: 10px;
     height: 90px;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 button {
     background-color: #20c997;
@@ -69,4 +69,5 @@ button {
     border-radius: 5px;
     font-size: 15px;
     margin-top: 40px;
+    width: 100%;
 }
