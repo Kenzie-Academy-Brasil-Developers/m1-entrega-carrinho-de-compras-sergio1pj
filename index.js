@@ -45,15 +45,13 @@ buttonEnd.innerText = "Finalizar Compra";
 total.appendChild(buttonEnd);
 function createCard(product) {
     let tagLi = document.createElement("li");
-    let tagDivInfo = document.createElement("div");
     let tagNome = document.createElement("h2");
     let tagValor = document.createElement("p");
     tagLi.classList.add("product-card");
     tagNome.innerText = product["name"];
     tagValor.innerText = `R$ ${product["price"]}`.replace(".", ",");
-    tagDivInfo.appendChild(tagNome);
-    tagDivInfo.appendChild(tagValor);
-    tagLi.appendChild(tagDivInfo);
+    tagLi.appendChild(tagNome);
+    tagLi.appendChild(tagValor);
     return tagLi;
 }
 function convertCards(array) {
