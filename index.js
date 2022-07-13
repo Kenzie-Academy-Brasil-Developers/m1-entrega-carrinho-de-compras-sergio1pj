@@ -29,11 +29,6 @@ let Body = document.querySelector("body");
 let Main = document.createElement("main");
 let productList = document.createElement("ul");
 let buttonEnd = document.createElement("button");
-
-Body.appendChild(Main);
-Main.appendChild(productList);
-
-
 function createProductDetails(product) {
     let tagLi = document.createElement("li");
     let tagDivInfo = document.createElement("div");
@@ -48,9 +43,9 @@ function createProductDetails(product) {
     tagLi.appendChild(tagDivInfo);
     return tagLi;
 }
-
-function createSection(list, section) {
-    list.forEach(element => section.appendChild(createProductDetails(element)));
+function createList(array, list) {
+    array.forEach(product => list.appendChild(createProductDetails(product)));
 }
-
-createSection(productsCart, productList);
+Body.appendChild(Main);
+createList(productsCart, productList);
+Main.appendChild(productList);
