@@ -31,7 +31,7 @@ main.classList.add("container");
 let title = document.createElement("h1");
 title.innerText = "Virtual Market";
 let listHeader = document.createElement("div");
-let itemValor = document.createElement("p");
+let itemValor = document.createElement("h2");
 itemValor.innerText = "Item Valor"; 
 listHeader.appendChild(itemValor);
 let productList = document.createElement("ul");

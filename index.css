@@ -17,8 +17,10 @@ html, body, figure, header,img, div, section, article, input, button, textarea, 
 .container {
     width: 20%;
 }
-.container h1 {
+.container > div h2 {
     margin-bottom: 40px;
+    background-color: #212529;
+    color: #fff;
 }
 .products-wrapper {
     background-color: #fff;
